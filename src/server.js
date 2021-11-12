@@ -18,7 +18,7 @@ app.use(
 app.use(express.json());
 
 //HTTP Logger
-app.use(morgan('combined'))
+// app.use(morgan('combined'))
 
 //Template Engine
 app.engine(
@@ -33,5 +33,5 @@ app.set('views', path.join(__dirname, 'resources/views'));
 route(app);
 
 app.listen(port, () => {
-console.log(`Example app listening at http://localhost:${port}`);
+    console.log(`Example app listening at http://localhost:${port}`);
 });
