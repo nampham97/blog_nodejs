@@ -18,7 +18,7 @@ app.use(
 app.use(express.json());
 
 //HTTP Logger
-// app.use(morgan('combined'))
+app.use(morgan('combined'))
 
 //Template Engine
 app.engine(
