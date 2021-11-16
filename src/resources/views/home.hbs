@@ -1,1 +1,20 @@
-<h3>namdz</h3>
+<div class="container-fluid">
+    <div class="row">
+
+ {{#each chars}}
+        <div class="col-lg">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top imgChar" src="{{this.image}}" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">{{this.name}}</h5>
+                    <p class="card-text">{{this.position}}</p>
+                    <a href="chars/{{this.name}}" class="btn btn-primary">Detail</a>
+                </div>
+                </div>
+        </div>
+
+  {{/each}}
+
+    </div>
+
+</div>

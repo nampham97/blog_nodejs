@@ -1,13 +1,9 @@
 @import 'variables';
 
-h1 {
-    color: cyan;
-}
-
-h2 {
-    color: gold;
-}
-
 h3 {
     color: $red-color;
+}
+
+.imgChar {
+    height: $height-char;
 }

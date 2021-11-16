@@ -1,14 +1,16 @@
-const course = require('../models/Course');
+const Char = require('../models/Character');
 
 class SiteController {
     //[GET] /
-    index(req, res) {
-        course.find({}, function (err, docs) {
-            console.log(err);
-            if (err) return res.json('ERROR!!!');
-
-            return res.json(docs);
-        });
+    index(req, res, next) {
+        Char.find({})
+            .lean()
+            .then((chars) => {
+                res.render('home', {
+                    chars,
+                });
+            })
+            .catch(next);
     }
 
     //[GET] /search
